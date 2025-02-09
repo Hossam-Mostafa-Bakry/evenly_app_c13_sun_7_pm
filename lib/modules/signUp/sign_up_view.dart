@@ -1,6 +1,6 @@
 import 'package:evently_app_c13_sun_7_pm/core/extensions/validations.dart';
 import 'package:evently_app_c13_sun_7_pm/core/routes/pages_route_name.dart';
-import 'package:evently_app_c13_sun_7_pm/core/utils/firebase_services.dart';
+import 'package:evently_app_c13_sun_7_pm/core/services/firebase_auth_serivce.dart';
 import 'package:evently_app_c13_sun_7_pm/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -124,7 +124,7 @@ class _SignUpViewState extends State<SignUpView> {
             ElevatedButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
-                  FirebaseServices.createAccount(
+                  FirebaseAuthService.createAccount(
                     emailAddress: _emailController.text,
                     password: _passwordController.text,
                   ).then(

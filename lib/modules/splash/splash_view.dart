@@ -19,7 +19,7 @@ class _SplashViewState extends State<SplashView> {
       () {
         Navigator.pushNamedAndRemoveUntil(
           context,
-          PagesRouteName.signIn,
+          PagesRouteName.layout,
           (route) => false,
         );
       },

@@ -3,8 +3,8 @@ import 'package:evently_app_c13_sun_7_pm/core/extensions/center_ext.dart';
 import 'package:evently_app_c13_sun_7_pm/core/extensions/dimensions_ext.dart';
 import 'package:evently_app_c13_sun_7_pm/core/extensions/padding_ext.dart';
 import 'package:evently_app_c13_sun_7_pm/core/routes/pages_route_name.dart';
+import 'package:evently_app_c13_sun_7_pm/core/services/firebase_auth_serivce.dart';
 import 'package:evently_app_c13_sun_7_pm/core/theme/color_palette.dart';
-import 'package:evently_app_c13_sun_7_pm/core/utils/firebase_services.dart';
 import 'package:evently_app_c13_sun_7_pm/core/widgets/custom_text_field.dart';
 import 'package:evently_app_c13_sun_7_pm/main.dart';
 import 'package:flutter/material.dart';
@@ -99,7 +99,7 @@ class _SignInViewState extends State<SignInView> {
             ElevatedButton(
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
-                  FirebaseServices.login(
+                  FirebaseAuthService.login(
                           emailAddress: _emailController.text,
                           password: _passwordController.text)
                       .then(

@@ -1,4 +1,5 @@
 import 'package:evently_app_c13_sun_7_pm/core/routes/pages_route_name.dart';
+import 'package:evently_app_c13_sun_7_pm/modules/createEvent/create_new_event_view.dart';
 import 'package:evently_app_c13_sun_7_pm/modules/forgetPassword/forget_password_view.dart';
 import 'package:evently_app_c13_sun_7_pm/modules/layout/layout_view.dart';
 import 'package:evently_app_c13_sun_7_pm/modules/onBoarding/on_boarding_view.dart';
@@ -54,6 +55,13 @@ abstract class AppRoutes {
         {
           return MaterialPageRoute(
             builder: (context) => const LayoutView(),
+            settings: settings,
+          );
+        }
+      case PagesRouteName.createNewEvent:
+        {
+          return MaterialPageRoute(
+            builder: (context) => const CreateNewEventView(),
             settings: settings,
           );
         }
